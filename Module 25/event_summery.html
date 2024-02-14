@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Summery</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+
+    <p id="text-display">Default text</p>
+    <input id="input-field" type="text" placeholder="type-text">
+    <button id="btn-update">Add </button>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handlerOnclick()">Event1</button>
+    <button id="event-listener">Event2</button>
+    <script>
+        function handlerOnclick(){
+            const handler_Status = document.getElementById('handler-status');
+            handler_Status.innerText = 'hello1';
+
+        }
+        document.getElementById('event-listener').addEventListener('click',function(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'hello2';
+        })
+
+        /*document.getElementById('btn-update').addEventListener('click',function(){
+            const text1 = document.getElementById('text-display');
+            const text2 = document.getElementById('input-field');
+            text1.innerText = text2.value;
+        })*/
+
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+            const p = document.getElementById('text-display');
+            p.innerText = inputText;
+            inputText.value = '';
+
+        })
+
+
+    </script>
+
+</body>
+</html>
