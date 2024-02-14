@@ -15,12 +15,27 @@
         <button onclick="makeRed()">Make red</button>
         <button id="make-blue">Make Blue</button>
         <button id="make-purple">Make Purple</button>
+        <button id="make-pink">Make Pink</button>
+        <button id="make-goldenrod">Make goldenrod</button>
         <script src="JS/event.js"></script>
         <script>
             const purpleButton = document.getElementById('make-purple');
             purpleButton.onclick = function makePurple(){
                 document.body.style.backgroundColor = 'purple';
             }
+        </script>
+        <script>
+            const pinkButton = document.getElementById('make-pink');
+            pinkButton.addEventListener('click',makePink);
+
+            function makePink(){
+                document.body.style.backgroundColor='pink';
+            }
+        </script>
+        <script>
+            document.getElementById('make-goldenrod').addEventListener('click',function(){
+                document.body.style.backgroundColor='goldenrod';
+            })
         </script>
     </body>
 </html>
