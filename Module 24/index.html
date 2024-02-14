@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <style>
+        li {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to mt DOM</h1>
+    </header>
+    <main id="main-container">
+        <section class="fruits">
+            <h1 id="fruit-title">Fruits I like</h1>
+            <ul id="item">
+                <li>lorem5</li>
+                <li>lorem5</li>
+                <li>lorem5</li>
+            </ul>
+        </section>
+        <section id="place_contanier">
+            <h1 id="places-title">Important places I like</h1>
+            <ul id="importent_places">
+                <li class="important_places">lorem5</li>
+                <li class="important_places">lorem2</li>
+                <li class="important_places">lorem5</li>
+            </ul>
+        </section>
+        <section >
+            <h1>My Awesome DOM de baba</h1>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+            </ul>
+        </section>
+        <script src="js/dom.js"></script>
+        <script>
+            const liCollection = document.getElementsByTagName('li');
+            //console.log(liCollection);
+            const alHeadings = document.getElementsByTagName('h1');
+            for(const h1 of alHeadings)
+            {
+                //console.log(h1.innerText);//
+            }
+
+            const places = document.getElementsByClassName('important_places');
+            //console.log(places);
+            for(const place of places)
+            {
+                console.log(place.innerText);
+            }
+
+            const title = document.getElementById('fruit-title');
+            const fruitscontainer = document.querySelectorAll('.fruits li');
+            console.log(fruitscontainer);
+            title.innerText = 'Fruits '
+        </script>
+        <script src="js/append.js"></script>
+        <script src="js/style.js"></script>
+    </main>
+</body>
+</html> 

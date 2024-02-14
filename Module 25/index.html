@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS DOM EVENT</title>
+    </head>
+    <body>
+        <h1>DOm er special event</h1>
+        <button onclick="console.log(7)">Click Me !</button>
+        <button title="hello" onclick="console.log(8)">Another Click Me !</button>
+
+        <br>
+        <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
+        <button onclick="makeRed()">Make red</button>
+        <button id="make-blue">Make Blue</button>
+        <button id="make-purple">Make Purple</button>
+        <script src="JS/event.js"></script>
+        <script>
+            const purpleButton = document.getElementById('make-purple');
+            purpleButton.onclick = function makePurple(){
+                document.body.style.backgroundColor = 'purple';
+            }
+        </script>
+    </body>
+</html>
+
+<!-- Common dom event search on google -->
